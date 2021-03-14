@@ -23,23 +23,24 @@ EVEN = "even"
 PRIME = "prime"
 
 
+def is_prime(x):
+    for i in range(2, x):
+        if x % i == 0:
+            return False
+        return True
+
+
 def filter_numbers(some_list, param):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
     (выбор производится передачей дополнительного аргумента)
     """
-    def is_prime(x):
-        for i in range(2, x):
-            if x % i == 0:
-                return False
-            return True
-
-    if param == "odd":
+    if param == ODD:
         return list(filter(lambda x: x % 2 != 0, some_list))
-    if param == "even":
+    if param == EVEN:
         return list(filter(lambda x: x % 2 == 0, some_list))
-    if param == "prime":
+    if param == PRIME:
         return list(filter(is_prime, some_list))
 
 
