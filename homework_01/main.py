@@ -15,7 +15,7 @@ def power_numbers(some_list):
 
 
 power_numbers(my_list)
-print(power_numbers(my_list))
+#print(power_numbers(my_list))
 
 # filter types
 ODD = "odd"
@@ -24,10 +24,12 @@ PRIME = "prime"
 
 
 def is_prime(x):
-    for i in range(2, x):
+   for i in range(2, x):
         if x % i == 0:
             return False
-        return True
+        pass
+   return True
+
 
 
 def filter_numbers(some_list, param):
@@ -45,3 +47,4 @@ def filter_numbers(some_list, param):
 
 
 print(filter_numbers(my_list_1, PRIME))
+#print(is_prime(7))
