@@ -6,7 +6,7 @@ my_list = [1, 6, 95, 69, 7, 24, 60]
 my_list_1 = [1, 3, 27, 69, 7, 24, 60]
 
 
-def power_numbers(some_list):
+def power_numbers(*some_list):
     """
     функция, которая принимает N целых чисел,
     и возвращает список квадратов этих чисел
@@ -14,8 +14,8 @@ def power_numbers(some_list):
     return [i ** 2 for i in some_list]
 
 
-power_numbers(my_list)
-#print(power_numbers(my_list))
+power_numbers(1, 6, 95, 69, 7, 24, 60)
+print(power_numbers(1, 6, 95, 69, 7, 24, 60))
 
 # filter types
 ODD = "odd"
@@ -24,15 +24,14 @@ PRIME = "prime"
 
 
 def is_prime(x):
-   for i in range(2, x):
+    for i in range(2, x):
         if x % i == 0:
             return False
         pass
-   return True
+    return True
 
 
-
-def filter_numbers(some_list, param):
+def filter_numbers(param, *some_list):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -46,5 +45,5 @@ def filter_numbers(some_list, param):
         return list(filter(is_prime, some_list))
 
 
-print(filter_numbers(my_list_1, PRIME))
-#print(is_prime(7))
+print(filter_numbers(PRIME, 5, 6, 9))
+
