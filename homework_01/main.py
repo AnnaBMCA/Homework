@@ -31,7 +31,7 @@ def is_prime(x):
     return True
 
 
-def filter_numbers(param, *some_list):
+def filter_numbers(some_list, param):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -45,5 +45,5 @@ def filter_numbers(param, *some_list):
         return list(filter(is_prime, some_list))
 
 
-print(filter_numbers(PRIME, 5, 6, 9))
+print(filter_numbers(my_list, PRIME))
 
