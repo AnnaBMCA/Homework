@@ -23,7 +23,7 @@ class Plane(Vehicle):
         else:
             self.cargo += w
 
-    def remove_all_cargo(self, z):
+    def remove_all_cargo(self):
         z = self.cargo
         self.cargo = 0
         return z
