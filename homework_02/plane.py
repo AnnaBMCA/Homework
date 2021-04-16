@@ -4,6 +4,7 @@
 from homework_02.base import Vehicle
 from homework_02.exceptions import CargoOverload
 
+
 class Plane(Vehicle):
     cargo = 0
     max_cargo = 0
@@ -29,7 +30,8 @@ class Plane(Vehicle):
         return z
 
 
-p = Plane(500, 100, 15, 50)
-p.load_cargo(5)
-print(p.cargo)
-#print(p.remove_all_cargo(2))
+# p = Plane(500, 100, 15, 5)
+# p.load_cargo(50)
+# print(p.cargo)
+# print(p.remove_all_cargo())
+
